@@ -1,0 +1,119 @@
+.container-modal {
+    position: fixed;
+    background-color: #5555;
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+  }
+  
+  .content-modal {
+    width: 320px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 90%;
+  }
+  .content {
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .title-modal {
+    border-radius: 5px 5px 0 0;
+    background-color: var(--ogi-bg);
+    width: 100%;
+    margin: 0 !important;
+    color: var(--yellow);
+    display: flex;
+    justify-content: space-around
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 8px;
+    background-color: var(--ddd);
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+  }
+  
+  label {
+    margin: 8px 0;
+  }
+  
+  .check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .check a{
+    text-decoration: none;
+    margin: 0.5rem;
+  }
+  .colline {
+    display: flex;
+    flex-direction: column;
+    margin: 7px 0;
+  }
+  
+  .colline label {
+    margin: 4px 0;
+    font-size: 12px;
+  }
+  .region {
+    display: flex;
+    flex-direction: column;
+    margin: 7px 0;
+  }
+  
+  .region label {
+    margin: 4px 0;
+  }
+  .region span{
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin: 15px 20px;
+  }
+  
+  .buttons .close {
+    background: #fff;
+    color: var(--blue);
+    font-size: 16px;
+  }
+  
+  .envoyer {
+    background: var(--blue);
+    color: #fff;
+    padding: 7px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  
+  .colline input[type="radio"] {
+    display: none;
+  }
+  small{
+    color: #f44336;
+  }
+  
+  /* /////////////// */
+  
+  
