@@ -1,5 +1,7 @@
 {
-  "name": "nkoragute",
-  "integrations": {},
+  "name": "ionic_app_name",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "vue"
 }

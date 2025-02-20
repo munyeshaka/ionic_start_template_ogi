@@ -1,36 +1,24 @@
 <template>
-    <div class="notFound">
-        <img @click="goHome()" src="/static/logo.png">
-        <h2>404 Not Found</h2>
-    </div>
+    <ion-page>
+        <ion-content :fullscreen="true">
+            <div class="signup-container">
+                <img @click="goHome()" loading="lazy" src="/static/logo.png">
+                <br>
+                <br>
+                <span class="result">404 | Not Found.</span>
+            </div>
+        </ion-content>
+    </ion-page>
 </template>
+
 
 <script>
 
 export default {
-    name: "PathNotFoundView",
-    data() {
-        return {
-        };
-    },
     methods: {
         goHome() {
             this.$router.push('/')
         },
     }
-};
+}
 </script>
-
-<style>
-.notFound {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.notFound img{
-    width: 50px;
-    height: 50px;
-    text-align: center;
-}
-</style>

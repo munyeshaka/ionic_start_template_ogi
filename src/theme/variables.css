@@ -1,312 +1,576 @@
-/* Ionic Variables and Theming. For more info, please see:
-http://ionicframework.com/docs/theming/ */
-
-/** Ionic CSS Variables **/
 :root {
-  /** primary **/
-
-  --c_50: #faf8ec;
-  --c_100: #f4edcd;
-  --c_200: #ebdb9d;
-  --c_400: #d5a83a;
-  --c_500: #c5922d; /* primary */
-  --c_600: #aa7324;
-  --c_700: #885320;
-  --c_950: #381d10;
-
-  --black: #18181b;
-  --white: #fff;
-  --red: #d62828;
-  --green: #29c467;
-  --gray: gray;
-
-  --border-light: #d4d4d8;
-  --border-dark: #27272a;
-
-  --primary: var(--c_500);
-  --btn-default: var(--primary);
-  --btn-hover: var(--c_600);
-  --btn-active: var(--c_700);
-
-  --btn-disabled-light: var(--c_100);
-  --btn-disabled-dark: var(--c_950);
-
-  --btn-color-disabled-light: var(--c_400);
-  --btn-color-disabled-dark: var(--c_700);
-
-  --card-bg-light: var(--c_200);
-  --card-color-light: var(--c_950);
-  
-  --card-bg-dark: var(--c_950);
-  --card-color-dark: var(--c_50);
-
-  --card-border-light: var(--c_600);
-  --card-border-dark: var(--c_400);
-
-
-  --bg: var(--white);
-  --card-bg: var(--card-bg-light);
-  --card-color: var(--card-color-light);
-  --card-border: var(--card-border-light);
-  --bg-input: var(--white);
-  --border: var(--border-light);
-
-
+  --red: #e76268;
+  --premier: #2b8754;
+  --green: #1db954;
+  --bg: #08090b;
+  --bg1: #121315;
+  --gray: #a2a2a4;
+  --white: #F7F7F7;
+  --ccc: #ccc;
+  --txt_color: #222;
+  --gray_dark: #444546;
+  --gray_select: #3b3b3b;
+  --black: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-  /*
-   * Dark Colors
-   * -------------------------------------------
-   */
-
-  body {
-    --bg: var(--black);
-    --card-bg: var(--card-bg-dark);
-    --card-color: var(--card-color-dark);
-    --card-border: var(--card-border-dark);
-    --bg-input: var(--black);
-    --border: var(--border-dark);
-
-    --ion-color-primary: #428cff;
-    --ion-color-primary-rgb: 66, 140, 255;
-    --ion-color-primary-contrast: #ffffff;
-    --ion-color-primary-contrast-rgb: 255, 255, 255;
-    --ion-color-primary-shade: #3a7be0;
-    --ion-color-primary-tint: #5598ff;
-
-    --ion-color-secondary: #50c8ff;
-    --ion-color-secondary-rgb: 80, 200, 255;
-    --ion-color-secondary-contrast: #ffffff;
-    --ion-color-secondary-contrast-rgb: 255, 255, 255;
-    --ion-color-secondary-shade: #46b0e0;
-    --ion-color-secondary-tint: #62ceff;
-
-    --ion-color-tertiary: #6a64ff;
-    --ion-color-tertiary-rgb: 106, 100, 255;
-    --ion-color-tertiary-contrast: #ffffff;
-    --ion-color-tertiary-contrast-rgb: 255, 255, 255;
-    --ion-color-tertiary-shade: #5d58e0;
-    --ion-color-tertiary-tint: #7974ff;
-
-    --ion-color-success: #2fdf75;
-    --ion-color-success-rgb: 47, 223, 117;
-    --ion-color-success-contrast: #000000;
-    --ion-color-success-contrast-rgb: 0, 0, 0;
-    --ion-color-success-shade: #29c467;
-    --ion-color-success-tint: #44e283;
-
-    --ion-color-warning: #ffd534;
-    --ion-color-warning-rgb: 255, 213, 52;
-    --ion-color-warning-contrast: #000000;
-    --ion-color-warning-contrast-rgb: 0, 0, 0;
-    --ion-color-warning-shade: #e0bb2e;
-    --ion-color-warning-tint: #ffd948;
-
-    --ion-color-danger: #ff4961;
-    --ion-color-danger-rgb: 255, 73, 97;
-    --ion-color-danger-contrast: #ffffff;
-    --ion-color-danger-contrast-rgb: 255, 255, 255;
-    --ion-color-danger-shade: #e04055;
-    --ion-color-danger-tint: #ff5b71;
-
-    --ion-color-dark: #f4f5f8;
-    --ion-color-dark-rgb: 244, 245, 248;
-    --ion-color-dark-contrast: #000000;
-    --ion-color-dark-contrast-rgb: 0, 0, 0;
-    --ion-color-dark-shade: #d7d8da;
-    --ion-color-dark-tint: #f5f6f9;
-
-    --ion-color-medium: #989aa2;
-    --ion-color-medium-rgb: 152, 154, 162;
-    --ion-color-medium-contrast: #000000;
-    --ion-color-medium-contrast-rgb: 0, 0, 0;
-    --ion-color-medium-shade: #86888f;
-    --ion-color-medium-tint: #a2a4ab;
-
-    --ion-color-light: #222428;
-    --ion-color-light-rgb: 34, 36, 40;
-    --ion-color-light-contrast: #ffffff;
-    --ion-color-light-contrast-rgb: 255, 255, 255;
-    --ion-color-light-shade: #1e2023;
-    --ion-color-light-tint: #383a3e;
-  }
-
-  /*
-   * iOS Dark Theme
-   * -------------------------------------------
-   */
-
-  .ios body {
-    --ion-background-color: #000000;
-    --ion-background-color-rgb: 0, 0, 0;
-
-    --ion-text-color: #ffffff;
-    --ion-text-color-rgb: 255, 255, 255;
-
-    --ion-color-step-50: #0d0d0d;
-    --ion-color-step-100: #1a1a1a;
-    --ion-color-step-150: #262626;
-    --ion-color-step-200: #333333;
-    --ion-color-step-250: #404040;
-    --ion-color-step-300: #4d4d4d;
-    --ion-color-step-350: #595959;
-    --ion-color-step-400: #666666;
-    --ion-color-step-450: #737373;
-    --ion-color-step-500: #808080;
-    --ion-color-step-550: #8c8c8c;
-    --ion-color-step-600: #999999;
-    --ion-color-step-650: #a6a6a6;
-    --ion-color-step-700: #b3b3b3;
-    --ion-color-step-750: #bfbfbf;
-    --ion-color-step-800: #cccccc;
-    --ion-color-step-850: #d9d9d9;
-    --ion-color-step-900: #e6e6e6;
-    --ion-color-step-950: #f2f2f2;
-
-    --ion-item-background: #000000;
-
-    --ion-card-background: #1c1c1d;
-  }
-
-  .ios ion-modal {
-    --ion-background-color: var(--ion-color-step-100);
-    --ion-toolbar-background: var(--ion-color-step-150);
-    --ion-toolbar-border-color: var(--ion-color-step-250);
-  }
-
-
-  /*
-   * Material Design Dark Theme
-   * -------------------------------------------
-   */
-
-  .md body {
-    --ion-background-color: #121212;
-    --ion-background-color-rgb: 18, 18, 18;
-
-    --ion-text-color: #ffffff;
-    --ion-text-color-rgb: 255, 255, 255;
-
-    --ion-border-color: #222222;
-
-    --ion-color-step-50: #1e1e1e;
-    --ion-color-step-100: #2a2a2a;
-    --ion-color-step-150: #363636;
-    --ion-color-step-200: #414141;
-    --ion-color-step-250: #4d4d4d;
-    --ion-color-step-300: #595959;
-    --ion-color-step-350: #656565;
-    --ion-color-step-400: #717171;
-    --ion-color-step-450: #7d7d7d;
-    --ion-color-step-500: #898989;
-    --ion-color-step-550: #949494;
-    --ion-color-step-600: #a0a0a0;
-    --ion-color-step-650: #acacac;
-    --ion-color-step-700: #b8b8b8;
-    --ion-color-step-750: #c4c4c4;
-    --ion-color-step-800: #d0d0d0;
-    --ion-color-step-850: #dbdbdb;
-    --ion-color-step-900: #e7e7e7;
-    --ion-color-step-950: #f3f3f3;
-
-    --ion-item-background: #1e1e1e;
-
-    --ion-toolbar-background: #1f1f1f;
-
-    --ion-tab-bar-background: #1f1f1f;
-
-    --ion-card-background: #1e1e1e;
-  }
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
-/* ######################### ######################### */
+body {
+  --ion-background-color: var(--bg);
+  --ion-text-color: var(--white);
+  height: 100vh;
+}
 
+
+.toolbar-start {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg1);
+  padding: 10px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg1);
+  font-weight: 600;
+  padding: 16px;
+}
+
+.header-title {
+  color: var(--white);
+  font-size: 20px;
+}
+
+ion-buttons {
+  height: 10px;
+}
+
+ion-back-button {
+  color: var(--white);
+}
 
 ion-title {
-  color: var(--yellow);
   text-align: center;
 }
 
-ion-label {
-  color: var(--yellow);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 100px 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.btn {
+  background-color: #222;
+  color: var(--white);
+  border-radius: 6px;
+  padding: 5px 8px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn.selected {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 6px;
+  padding: 4px 8px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg1);
+  min-width: 150px;
+  max-width: 150px;
+  color: var(--white);
+  transition: all .7s ease;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 9px;
+
+}
+
+.card img {
+  width: 150px;
+  height: 100px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.title img {
+  width: 100px;
+  border-radius: 3px;
+  margin: -2px 0;
+}
+
+.see-all {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-size: 22px;
+}
+
+.see-all-btn {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.card-link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+.point {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.sub-gray {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.result {
+  font-size: 14px;
+  color: var(--gray);
+  text-align: center;
+}
+
+.card-movie {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  /* kugira zirehe */
 }
 
 
-/* ///////////////////////////////////////// */
+/* ///////////////////////////// */
 
+.header {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
 
-.form{
-  background-color: var(--bg);
-  padding: 20px;
-  border: 1px solid var(--border);
+.movie-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.infos {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.infos img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 8px;
+  background: var(--premier);
+  color: var(--black);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-main span {
+  margin: 0 5px;
+}
+
+.button-option1 {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+
+.button-option2 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+ion-thumbnail {
+  --size: 80px;
+}
+
+ion-thumbnail img {
   border-radius: 8px;
+
+}
+
+.movie-detail-card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 56.25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.movie-detail-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--bg));
+}
+
+.movie-detail-card .video-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: var(--bg1);
+  z-index: -1;
+}
+
+.movie-detail-card .video-js.video-playing {
+  z-index: 1;
+}
+
+.play {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  gap: 10px;
+}
+
+.vjs-volume-panel {
+  width: 100px;
+}
+
+.vjs-volume-panel .vjs-volume-control {
+  width: 100%;
+  /* background-color: var(--bg); */
+  border-radius: 5px;
+}
+
+.vjs-volume-control .vjs-volume-level {
+  /* background-color: var(--premier); */
+  border-radius: 5px;
+}
+
+#player_html5_api {
+  border-radius: 8px;
+}
+
+.vjs-control-bar {
+  border-radius: 0 0 8px 8px;
+}
+
+.video-js .vjs-big-play-button {
+  color: var(--premier);
+}
+
+.vjs-loading-spinner {
+  border: 2px solid transparent;
+  border-top-color: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  /* animation: spin 1s linear infinite; */
+}
+
+@media (min-width: 550px) {
+  .movie-detail-card {
+    padding-bottom: 0;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .play-button ion-icon {
+    width: 60px;
+    height: 60px;
+    color: var(--white);
+    text-align: center;
+  }
+}
+
+@media (min-width: 850px) {
+  .movie-detail-card {
+    padding-bottom: 0;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+
+}
+
+.episode-infos {
+  display: flex;
+  flex-direction: column;
+}
+
+.episode-title {
+  margin-top: 12px;
+}
+
+.option-button {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.seasons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.episode-item {
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.play-sign {
+  position: absolute;
+  margin: 5px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  gap: 2px;
+  align-items: end;
+}
+
+.play-sign-item {
+  display: inline-block;
+  font-size: 18px;
+  border: 2px solid var(--premier);
+  border-radius: 1px;
+}
+
+.level-1 {
+  animation: change-height 0.5s infinite;
+}
+
+.level-2 {
+  animation: change-height 0.7s infinite;
+}
+
+.level-3 {
+  animation: change-height 0.9s infinite;
+}
+
+@keyframes change-height {
+
+  0%,
+  100% {
+    height: 20px;
+  }
+
+  25% {
+    height: 16px;
+  }
+
+  50% {
+    height: 12px;
+  }
+
+  75% {
+    height: 8px;
+  }
+}
+
+
+.episode-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ion-modal[breakpoint="0.6"] ion-content {
+  --overflow: auto;
+} */
+
+.modal-scroll {
+  /* height: 100%;
+  min-height: 60%; */
+  overflow-y: auto;
+  padding: 0 0 50px 0;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 310px;
 }
 
-input,
-select {
-  background-color: var(--bg-input);
-  border: 1px solid var(--border);
+.stati {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.couple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  background-color: #222;
+  border-radius: 8px;
+  margin: 5px 0;
+  padding: 10px;
+  white-space: pre-wrap;
+}
+
+.category {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+
+/* //////////////////////// */
+
+.signup-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.signup-container img{
+  width: 100px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  gap: 12px;
+}
+
+ion-item.custom-item {
+  --background: #333;
+  --color: white;
+  border-radius: 8px;
+}
+
+.container-modal {
+  backdrop-filter: blur(3px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.content-modal {
+  background-color: var(--bg);
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  max-height: 70%;
+  padding: 20px;
+  position: relative;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.input {
+  width: 100%;
   padding: 8px;
-  border-radius: 5px;
+  border: 0;
   outline: 0;
+  border-radius: 5px;
+  margin: 0;
+  background-color: var(--bg1);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-size: 18px;
 }
-input::placeholder {
-  font-size: 17px;
+
+.login_color {
+  color: var(--premier);
+  cursor: pointer;
 }
 
-.btn{
-  background-color: var(--btn-default);
-  color: var(--white);
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 18px;
-}
-.container-card{
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-.card {
-  width: 140px;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--card-bg);
-  color: var(--card-color);
-  gap: 8px;
-  border-radius: 8px;
-  align-items: center;
-  text-align: center;
-  padding: 10px 5px;
+.confirm {
+  color: var(--premier)
 }
 
-.no-decoration {
-    text-decoration: none;
-    cursor: pointer;
+small {
+  color: var(--red)
 }
 
-small{
-  color: var(--red);
-}
-ion-title {
-  color: var(--primary);
-  text-align: center;
-}
-
-ion-label {
-  color: var(--primary);
-}
-
-.container-card{
-  display: flex;
-  flex-wrap: wrap;
+.danger {
+  color: var(--red)
 }

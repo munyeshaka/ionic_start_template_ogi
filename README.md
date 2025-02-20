@@ -1,2 +1,2 @@
-# mobile_nkoragute
-mobile_nkoragute 
+# mobile_ionic_app_name
+Modern mobile ionic_app_name

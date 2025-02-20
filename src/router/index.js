@@ -1,104 +1,57 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
+
+import TabsView from '../views/tabs/TabsView.vue'
+import HomeView from '../views/tabs/HomeView.vue'
+
+import SignupView from '../views/SignupView.vue'
+import LoginView from '../views/LoginView.vue'
+
+import PathNotFoundView from '../views/PathNotFoundView.vue'
+
 import store from '../store';
 
 
-import LoginPage from '@/views/LoginPage.vue'
-import SignupPage from '@/views/SignupPage.vue'
-import PathNotFoundView from '@/views/PathNotFoundView.vue'
-
-import MenuView from '@/views/menu/MenuView.vue'
-
-import HomePage from '@/views/menu/home/HomePage.vue'
-
-import ToolsView from '@/views/menu/tools/ToolsView.vue'
-
-//###############################//
-
-import ChargeRecetteView from '@/views/menu/tools/chargeRecette/ChargeRecetteView.vue'
-import DeptView from '@/views/menu/tools/dept/DeptView.vue'
-import LostView from '@/views/menu/tools/lost/LostView.vue'
-
-import OrderView from '@/views/menu/tools/product/OrderView.vue'
-import ProductView from '@/views/menu/tools/product/ProductView.vue'
-import StockView from '@/views/menu/tools/product/StockView.vue'
-
-import BookingView from '@/views/menu/tools/service/BookingView.vue'
-import ServiceView from '@/views/menu/tools/service/ServiceView.vue'
-
-import TangaView from '@/views/menu/tools/tanga/TangaView.vue'
-
-import ChatView from '@/views/menu/chat/ChatView.vue'
-//###############################//
-//
-
-import SettingsView from '@/views/menu/settings/SettingsView.vue'
-//###############################//
-//
-
 const routes = [
   {
-    path: '/', redirect: '/menu/home',
+    path: '/', redirect: '/tabs/home',
     children: [
       {
-        path: '/menu', name: 'menu', component: MenuView,
+        path: '/tabs', name: 'tabs', redirect: '/tabs/home', component: TabsView,
         children: [
-          { path: 'home', name: 'home', component: HomePage },
-          {
-            path: 'tools',
-            meta: {
-              requiresAuth: true,
-            },
-            children: [
-              { path: '', name: 'tools', component: ToolsView },
-              { path: 'chargeRecette/ChargeRecette', name: 'ChargeRecette', component: ChargeRecetteView },
-              { path: 'dept/dept', name: 'dept', component: DeptView },
-              { path: 'lost/lost', name: 'lost', component: LostView },
-
-              { path: 'product/order', name: 'order', component: OrderView },
-              { path: 'product/product', name: 'product', component: ProductView },
-              { path: 'product/stock', name: 'stock', component: StockView },
-
-              { path: 'service/booking', name: 'booking', component: BookingView },
-              { path: 'service/service', name: 'service', component: ServiceView },
-
-              { path: 'tanga/tanga', name: 'tanga', component: TangaView },
-
-            ]
+          { 
+            path: '/tabs/home', 
+            name: 'home', 
+            component: HomeView 
           },
-          {
-            path: '/menu/chat', name: 'chat', component: ChatView,
+          { 
+            path: '/tabs/home', 
+            name: 'home', 
+            component: HomeView,
             meta: {
               requiresAuth: true,
-            },
-            // children: [
-            //   { path: 'chat', name: 'chat', component: chatView },
-            // ]
-          },
-          {
-            path: '/menu/settings', name: 'settings', component: SettingsView,
-            meta: {
-              requiresAuth: true,
-            },
-            // children: [
-            //   { path: 'chat', name: 'chat', component: chatView },
-            // ]
+            }
           },
         ]
       }
-    ]
+    ],
   },
-
-  { path: '/signup', name: 'signup', component: SignupPage },
-  { path: '/login', name: 'login', component: LoginPage },
-  { path: '/:pathMatch(.*)*', component: PathNotFoundView },
+  { path: '/login', name: 'login', component: LoginView },
+  { path: '/signup', name: 'signup', component: SignupView },
+  {
+    path: '/:pathMatch(.*)*', component: PathNotFoundView
+  },
 ]
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
-})
+});
 
-
+// const router = createRouter({
+//   history: createWebHistory(import.meta.env.BASE_URL),
+//   routes
+// })
 
 router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
@@ -128,5 +81,3 @@ router.beforeEach((to, from, next) => {
 
 
 export default router
-
-

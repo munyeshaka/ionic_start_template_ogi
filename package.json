@@ -1,35 +1,34 @@
 {
-  "name": "ionic-app-base",
-  "version": "0.1.0",
+  "name": "ionic_app_name",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "@capacitor/android": "^4.7.3",
-    "@capacitor/app": "^4.1.1",
-    "@capacitor/cli": "^4.7.3",
-    "@capacitor/core": "^4.7.3",
-    "@capacitor/ios": "^4.7.3",
-    "@fortawesome/fontawesome-free": "^6.4.2",
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/vue-fontawesome": "^3.0.3",
-    "@ionic/vue": "^7.0.0",
-    "@ionic/vue-router": "^7.0.0",
-    "axios": "^1.3.5",
+    "@capacitor/android": "6.1.2",
+    "@capacitor/app": "6.0.1",
+    "@capacitor/core": "6.1.2",
+    "@capacitor/haptics": "6.0.1",
+    "@capacitor/keyboard": "6.0.2",
+    "@capacitor/status-bar": "6.0.1",
+    "@ionic/vue": "^8.0.1",
+    "@ionic/vue-router": "^8.0.1",
+    "axios": "^1.7.2",
     "core-js": "^3.6.5",
     "ionicons": "^7.0.0",
-    "jwt-decode": "^3.1.2",
+    "moment": "^2.30.1",
+    "swiper": "^11.1.1",
+    "video.js": "^8.16.1",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
+    "@capacitor/cli": "6.1.2",
     "@vue/cli-plugin-babel": "~5.0.0-rc.1",
     "@vue/cli-plugin-e2e-cypress": "~5.0.0-rc.1",
     "@vue/cli-plugin-eslint": "~5.0.0-rc.1",
@@ -44,5 +43,6 @@
     "eslint-plugin-vue": "^9.8.0",
     "jest": "^27.3.1",
     "ts-jest": "^27.0.7"
-  }
+  },
+  "description": "An Ionic project"
 }

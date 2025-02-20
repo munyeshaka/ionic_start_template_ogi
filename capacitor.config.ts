@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.egeratech.nkoragute',
-  appName: 'nkoragute',
+  appId: 'com.egeratech.ionic_app_name',
+  appName: 'ionic_app_name',
   webDir: 'public',
   bundledWebRuntime: false
 };

@@ -1,5 +1,5 @@
 {
-  "name": "Blank Starter",
+  "name": "ionic_app_name",
   "baseref": "main",
   "tarignore": [
     "node_modules",

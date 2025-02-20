@@ -1,28 +1,16 @@
-
 import { createStore } from 'vuex'
-
+// import axios from 'axios';
+// import router from '../router'
 
 export default createStore({
     state: {
-        // baseUrl: 'https://streaming.amidev.bi/api',
         baseUrl: 'http://127.0.0.1:8000/api',
-        
         user: '',
         logged_in: false,
-        isPaid: false,
-
-        users: [], /// ALL
-        works: [],
-        workOgi: [],
-        depts: [],
-        losts: [],
-        shopCategories: [],
-        shopProducts: [],
-        user_logged: [],
-
-        modal: false
+        showToast: false,
+        toastMessage: ''
     },
-        mutations: {
+    mutations: {
         logout(state) {
             state.user = null;
             localStorage.removeItem('user');

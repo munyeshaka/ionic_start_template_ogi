@@ -1,9 +1,12 @@
+// import axiosMethods from "./axiosMethods"
 import store from '../store';
 
 export default {
+    // mixins: [axiosMethods],
     data() {
         return {
-            user: JSON.parse(localStorage.getItem('user'))
+            user: JSON.parse(localStorage.getItem('user')),
+            // paymentToken: JSON.parse(localStorage.getItem('paymentToken'))
         }
     },
     methods: {
@@ -34,31 +37,35 @@ export default {
                 this.$router.push('/login');
             }
         },
-        checkSubscription() {
-            this.axios.get(this.$store.state.baseUrl + `/last-subscription/`, this.getHeaders())
-                .then(response => {
-                    if (response.data.length > 0) {
-                        this.$store.state.isPaid = true;
-                        console.log('wararishe kweri', this.$store.state.isPaid);
-                    } else {
-                        // this.$router.push({ name: 'payment', query: { 'event_id': this.event_id } });
-                        this.$store.state.isPaid = false;
-                        console.log('riha', this.$store.state.isPaid);
-                    }
-                })
-                .catch(error => {
-                    console.error(error);
-                });
+
+        cutText(text) {
+            let maxLength = 25;
+            if (text?.length > maxLength) {
+                return text.substring(0, maxLength) + '...';
+            } else {
+                return text;
+            }
         },
+        // demanderAide() {
+        //     let text = "N'amahoro neza, ni gute noriha kugira RABA FILM ??"
+        //     let url = `https://wa.me/25769842175?text=${text}`
+        //     window.open(url, '_system');
+        // },
+        // confirmLogout() {
+        //     if (confirm('Vyukuri ushaka kwugara?')) {
+        //         localStorage.removeItem('user');
+        //         this.$store.dispatch('setLogged_in', false);
+        //         this.$store.state.user = '';
+        //         this.$store.dispatch('triggerToast', 'Sawa bayi !');
+        //         this.$router.push('/')
+        //     }
+        // },
     },
     computed: {
         logged_in() {
             return this.$store.getters.getLogged_in;
-        }
+        },
     },
     mounted() {
-    }
-};
-
-
-
+    },
+}

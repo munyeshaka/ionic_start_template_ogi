@@ -1,19 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import store from './store'
 import router from './router';
 import axios from 'axios'
+import store from './store'
 import mixins from '@/mixin/index.js';
 
-import {
-  IonApp, IonPage, IonicVue, IonRouterOutlet, IonIcon, IonLabel, IonProgressBar,
-  IonInput, IonItem, IonButton, IonButtons, IonCol, IonContent, IonSearchbar,
-  IonTabBar, IonTitle, IonToolbar, IonHeader, IonMenuButton, IonFabButton,
-  IonList, IonMenu, IonToggle, IonItemDivider, IonPopover, IonBadge,
-  IonSelectOption, IonSelect, IonDatetime, toastController, IonRefresher,
-  IonSpinner, alertController, IonSegment, IonSegmentButton, IonTabButton,
-  IonRippleEffect, IonTextarea, IonNote, IonRefresherContent, IonFooter, IonModal, IonCheckbox, IonToast, IonBackButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle
-} from '@ionic/vue';
+
+import { IonicVue } from '@ionic/vue';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
@@ -31,65 +24,63 @@ import '@ionic/vue/css/text-transformation.css';
 import '@ionic/vue/css/flex-utils.css';
 import '@ionic/vue/css/display.css';
 
+/* all icons */
+import * as allIcons from 'ionicons/icons'
+
+// all countries
+// import VueTelInput from 'vue-tel-input';
+// import 'vue-tel-input/dist/vue-tel-input.css';
+// import './theme/vue-tel-input.css';
+
 /* Theme variables */
 import './theme/variables.css';
 
-///// ICON //////
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import '@fortawesome/fontawesome-free/css/all.css'
-
-library.add(fas)
-
-///// ICON //////
+/* video.js */
+// import 'video.js/dist/video-js.css';
 
 
-axios.defaults.baseURL = 'http://127.0.0.1:8000/api'
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const csrfTokenInput = document.querySelector('input[name="csrfmiddlewaretoken"]');
-
-  if (csrfTokenInput) {
-    axios.defaults.headers.common['X-CSRFToken'] = csrfTokenInput.value;
-  }
-});
+import {
+  IonApp, IonPage, IonRouterOutlet, IonIcon, IonLabel, IonProgressBar,
+  IonInput, IonItem, IonButton, IonButtons, IonCol, IonContent, IonSearchbar,
+  IonTabBar, IonTitle, IonToolbar, IonHeader, IonMenuButton, IonFabButton,
+  IonList, IonMenu, IonToggle, IonItemDivider, IonPopover, IonBadge,
+  IonSelectOption, IonSelect, IonDatetime, IonRefresher,IonThumbnail,
+  IonSpinner, IonSegment, IonSegmentButton, IonTabButton,
+  IonRippleEffect, IonTextarea, IonNote, IonRefresherContent, IonFooter, 
+  IonModal, IonCheckbox, IonToast, IonBackButton, IonImg
+} from '@ionic/vue';
 
 
 const app = createApp(App)
 
-
 app.config.globalProperties.axios = axios //
+
+// Set up allIcons globally
+app.config.globalProperties.$allIcons = allIcons;
 
 app
   .use(IonicVue)
-  .use(store)
-  .use(FontAwesomeIcon)
   .use(router)
+  .use(store)
   .mixin(mixins)
+  // .use(VueTelInput);
 
-  const components = {
-    IonApp, IonPage, IonicVue, IonRouterOutlet, IonIcon, IonLabel, IonProgressBar, IonCheckbox,
-    IonInput, IonItem, IonButton, IonButtons, IonCol, IonContent, IonSearchbar,
-    IonTabBar, IonTitle, IonToolbar, IonHeader, IonMenuButton, IonFabButton,
-    IonList, IonMenu, IonToggle, IonItemDivider, IonPopover, IonBadge,
-    IonSelectOption, IonSelect, IonDatetime, toastController, IonRefresher,
-    IonSpinner, alertController, IonSegment, IonSegmentButton, IonTabButton,
-    IonRippleEffect, IonTextarea, IonNote, IonRefresherContent, IonFooter, IonModal, 
-    IonToast, IonBackButton,
-    IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle
-  };
-  
-  Object.entries(components).forEach(([name, component]) => {
-    app.component(name, component)
-  })
+const components = {
+  IonApp, IonPage, IonRouterOutlet, IonIcon, IonLabel, IonProgressBar, IonCheckbox,
+  IonInput, IonItem, IonButton, IonButtons, IonCol, IonContent, IonSearchbar,
+  IonTabBar, IonTitle, IonToolbar, IonHeader, IonMenuButton, IonFabButton,
+  IonList, IonMenu, IonToggle, IonItemDivider, IonPopover, IonBadge,
+  IonSelectOption, IonSelect, IonDatetime, IonRefresher,IonThumbnail,
+  IonSpinner, IonSegment, IonSegmentButton, IonTabButton,
+  IonRippleEffect, IonTextarea, IonNote, IonRefresherContent, 
+  IonFooter, IonModal, IonToast, IonBackButton, IonImg
+};
+
+Object.entries(components).forEach(([name, component]) => {
+  app.component(name, component)
+})
 
 app.mount('#app');
-
-
-
-
 
 
 

@@ -1,41 +1,35 @@
 <template>
-  <router-view />
+  <ion-app>
+    <router-view v-bind:key="$route.fullPath" />
+    <ion-toast ref="toast" swipe-gesture="vertical" :is-open="$store.state.showToast" :message="$store.state.toastMessage" :duration="3000" @ionToastDidClose="handleToastClose">
+    </ion-toast>
+  </ion-app>
 </template>
 
 <script>
 
-
-import { defineComponent } from 'vue';
-
-import {
-  useBackButton, useIonRouter
-} from '@ionic/vue';
-
-import { App } from '@capacitor/app';
-
-export default defineComponent({
-  name: 'App',
-  components: {
+export default {
+  data() {
+    return {
+    };
+  },
+  computed: {
+    showToast() {
+      return this.$store.state.showToast;
+    },
+    toastMessage() {
+      return this.$store.state.toastMessage;
+    }
   },
   methods: {
+    handleToastClose() {
+      this.$store.commit('HIDE_TOAST');
+    }
   },
   mounted() {
-    this.checkLogged_in()
-  },
-  setup() {
-    const ionRouter = useIonRouter();
-    useBackButton(-1, () => {
-      if (!ionRouter.canGoBack()) {
-        App.exitApp();
-      }
-    });
+    this.$store.state.user = JSON.parse(localStorage.getItem('user'))
   }
-}); 
+}
 </script>
 
-<style>
-:root {
-  --red: #9d0208;
-  --yellow: #d5a93f;
-}
-</style>
+<style></style>
