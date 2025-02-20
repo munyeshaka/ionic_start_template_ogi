@@ -1,2 +1,2 @@
-# mobile_ionic_app_name
-Modern mobile ionic_app_name
+# mobile_ ( ionic + vue js ) template original
+mobile_ ionic original
