@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 
 import TabsView from '../views/tabs/TabsView.vue'
 import HomeView from '../views/tabs/HomeView.vue'
+import AccountView from '../views/tabs/AccountView.vue'
 
 import SignupView from '../views/SignupView.vue'
 import LoginView from '../views/LoginView.vue'
@@ -23,10 +24,10 @@ const routes = [
             name: 'home', 
             component: HomeView 
           },
-          { 
-            path: '/tabs/home', 
-            name: 'home', 
-            component: HomeView,
+          {
+            path: '/tabs/account',
+            name: 'account',
+            component: AccountView,
             meta: {
               requiresAuth: true,
             }

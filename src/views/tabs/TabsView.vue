@@ -6,9 +6,9 @@
       <span class="tab-name">Ishikiro</span>
     </router-link>
 
-    <router-link to="/tabs/home" class="tab-link" :class="{ 'router-link-active': isActive('/tabs/home') }">
-      <ion-icon :icon="isActive('/tabs/home') ? $allIcons.home : $allIcons.homeOutline"></ion-icon>
-      <span class="tab-name">Ishikiro</span>
+    <router-link to="/tabs/account" class="tab-link" :class="{ 'router-link-active': isActive('/tabs/home') }">
+      <ion-icon :icon="isActive('/tabs/account') ? $allIcons.home : $allIcons.personOutline"></ion-icon>
+      <span class="tab-name">Account</span>
     </router-link>
 
   </div>

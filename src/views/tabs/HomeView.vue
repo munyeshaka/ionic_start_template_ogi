@@ -9,7 +9,7 @@
     </div>
   </div>
   <ion-content class="ion-padding">
-    <h1>Welcome home</h1>
+    <h1>Welcome home template</h1>
   </ion-content>
 </template>
 
