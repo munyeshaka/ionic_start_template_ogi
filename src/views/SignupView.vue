@@ -64,7 +64,7 @@ export default {
     },
     onSignup() {
       this.loading = true;
-      this.axios.post(this.baseUrl + '/signup/', this.form)
+      this.axios.post(this.$store.state.baseUrl + '/users/signup/', this.form)
         .then((response) => {
           localStorage.setItem("user", JSON.stringify(response.data));
           this.$store.state.user = JSON.parse(localStorage.getItem('user'))

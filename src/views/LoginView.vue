@@ -59,7 +59,7 @@ export default {
     onLogin() {
       this.loading = true
       this.axios
-        .post(this.baseUrl + '/login/', this.form)
+        .post(this.$store.state.baseUrl + '/users/login/', this.form)
         .then((response) => {
           localStorage.setItem("user", JSON.stringify(response.data));
           this.$store.state.user = JSON.parse(localStorage.getItem('user'))
