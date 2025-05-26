@@ -103,6 +103,8 @@
 </template>
 
 <script>
+import store from '@/store';
+
 // import OurNumber from '@/components/account/OurNumber.vue'
 // import OurEmail from '@/components/account/OurEmail.vue'
 // import OurPassword from '@/components/account/OurPassword.vue'
